@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./images/correct.png" type="image/x-icon" />
+    <title>Média</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="./images/grade.png" alt="logo" />
+        <h1>Calcule a sua média!</h1>
+        <nav class="about">
+          <ul>
+            <li>
+              <a href="#about">sobre</a>
+            </li>
+            <li>
+              <a href="https://github.com/iambel" target="_blank">contato</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <form id="form-assignment">
+        <input
+          type="text"
+          id="assignment-name"
+          required
+          placeholder=" atividade"
+        />
+        <input
+          type="number"
+          id="assignment-grade"
+          required
+          placeholder=" nota"
+          min="0"
+          max="10"
+          step="0.01"
+          pattern="^\d+(\.\d{1,2})?$"
+        />
+        <button type="submit">adicionar</button>
+      </form>
+      <table cellspacing="0">
+        <thead>
+          <tr>
+            <th>atividade</th>
+            <th>nota</th>
+            <th>resultado</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr>
+            <td>média final</td>
+            <td id="average-value">0</td>
+            <td id="average-result-word">
+              <span class="result">--</span>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
